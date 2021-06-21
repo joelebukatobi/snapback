@@ -1530,3 +1530,65 @@ body {
 
 .about-text {
   padding: 8rem 16rem; }
+
+.contact-page {
+  margin-top: 16rem;
+  display: flex;
+  flex-direction: column; }
+  .contact-page__heading {
+    margin-bottom: 8rem; }
+    .contact-page__heading .heading-1 {
+      font-family: "Rubik", sans-serif;
+      color: #d6ad5c;
+      font-weight: 700; }
+  .contact-page__form {
+    margin-bottom: 8rem;
+    width: 80%; }
+    .contact-page__form .message-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 8rem; }
+      .contact-page__form .message-group label {
+        font-size: 1.8rem;
+        color: #291f0a;
+        font-weight: 700; }
+      .contact-page__form .message-group input {
+        height: 5.6rem;
+        font-family: "DM Sans", sans-serif;
+        font-size: 1.6rem;
+        border: none;
+        border-bottom: 0.1rem solid #291f0a; }
+        .contact-page__form .message-group input::placeholder {
+          font-family: "DM Sans", sans-serif;
+          font-size: 1.6rem;
+          color: #4d4d4d; }
+    .contact-page__form__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8rem; }
+      .contact-page__form__row .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 45%; }
+        .contact-page__form__row .input-group label {
+          font-size: 1.8rem;
+          color: #291f0a;
+          font-weight: 700; }
+        .contact-page__form__row .input-group input {
+          height: 5.6rem;
+          font-family: "DM Sans", sans-serif;
+          font-size: 1.6rem;
+          border: none;
+          border-bottom: 0.1rem solid #291f0a; }
+          .contact-page__form__row .input-group input::placeholder {
+            font-family: "DM Sans", sans-serif;
+            font-size: 1.6rem;
+            color: #4d4d4d; }
+  .contact-page__reach {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16rem;
+    width: 80%; }
+    .contact-page__reach__group {
+      color: #291f0a; }

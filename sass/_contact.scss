@@ -1,0 +1,76 @@
+.contact-page {
+  margin-top: 16rem;
+  display: flex;
+  flex-direction: column;
+  &__heading {
+    margin-bottom: 8rem;
+    & .heading-1 {
+      font-family: $font-secondary;
+      color: $color-primary;
+      font-weight: 700;
+    }
+  }
+  &__form {
+    margin-bottom: 8rem;
+    width: 80%;
+    & .message-group {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 8rem;
+      & label {
+        font-size: 1.8rem;
+        color: #291f0a;
+        font-weight: 700;
+      }
+      & input {
+        height: 5.6rem;
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        border: none;
+        border-bottom: 0.1rem solid #291f0a;
+        &::placeholder {
+          font-family: $font-primary;
+          font-size: 1.6rem;
+          color: #4d4d4d;
+        }
+      }
+    }
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8rem;
+      & .input-group {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        & label {
+          font-size: 1.8rem;
+          color: #291f0a;
+          font-weight: 700;
+        }
+        & input {
+          height: 5.6rem;
+          font-family: $font-primary;
+          font-size: 1.6rem;
+          border: none;
+          border-bottom: 0.1rem solid #291f0a;
+          &::placeholder {
+            font-family: $font-primary;
+            font-size: 1.6rem;
+            color: #4d4d4d;
+          }
+        }
+      }
+    }
+  }
+  &__reach {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16rem;
+    width: 80%;
+    &__group {
+      color: #291f0a;
+    }
+  }
+}
