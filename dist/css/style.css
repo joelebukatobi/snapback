@@ -219,6 +219,9 @@ body {
   width: 100%;
   padding-bottom: 2.4rem; }
 
+.container-about {
+  background-color: #f8f7f5; }
+
 .modal {
   display: none;
   /* Hidden by default */
@@ -1498,3 +1501,32 @@ body {
       .note__content__bottom .list__item {
         font-size: 2.4rem;
         text-align: center; }
+
+.about {
+  background-color: #f8f7f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72rem; }
+  .about__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16rem; }
+    .about__content > * {
+      width: 30%; }
+    .about__content .heading-4 {
+      color: #d6ad5c;
+      font-weight: 700;
+      font-family: "Rubik", sans-serif; }
+    .about__content .heading-1 {
+      color: #000000;
+      font-weight: 700;
+      font-family: "Rubik", sans-serif; }
+  .about__image {
+    width: 50%; }
+    .about__image img {
+      width: 100%; }
+
+.about-text {
+  padding: 8rem 16rem; }

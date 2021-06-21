@@ -1,0 +1,36 @@
+.about {
+  background-color: #f8f7f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72rem;
+  &__content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 16rem;
+    & > * {
+      width: 30%;
+    }
+    & .heading-4 {
+      color: $color-primary;
+      font-weight: 700;
+      font-family: $font-secondary;
+    }
+    & .heading-1 {
+      color: $color-black;
+      font-weight: 700;
+      font-family: $font-secondary;
+    }
+  }
+  &__image {
+    width: 50%;
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+.about-text {
+  padding: 8rem 16rem;
+}
