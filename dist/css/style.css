@@ -1409,3 +1409,92 @@ body {
         text-transform: uppercase; }
       .shipping__row__table .btn {
         width: 50%; }
+
+.gifts {
+  position: relative;
+  height: 88rem;
+  margin-bottom: 8rem; }
+  .gifts__bg {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    top: 0; }
+    .gifts__bg__image {
+      width: 100%;
+      max-width: 192rem;
+      margin: 0 auto;
+      z-index: -5;
+      margin-top: -10rem; }
+  .gifts__content {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .gifts__content > * {
+      margin-bottom: 1.6rem; }
+    .gifts__content .heading-1 {
+      font-weight: 700;
+      font-family: "Rubik", sans-serif;
+      color: #d6ad5c; }
+    .gifts__content .btn {
+      width: 60%; }
+
+.note {
+  position: relative;
+  height: 96rem;
+  margin-bottom: 16rem; }
+  .note__bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    z-index: -5;
+    overflow: hidden; }
+    .note__bg__image {
+      width: 100%;
+      height: 100%;
+      max-width: 192rem;
+      margin: 0 auto; }
+  .note__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16rem; }
+    .note__content__top {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 16rem; }
+      .note__content__top .heading-3 {
+        font-family: "Rubik", sans-serif;
+        color: #d6ad5c;
+        font-weight: 700;
+        margin-bottom: 3.2rem; }
+      .note__content__top .textarea {
+        width: 100%; }
+      .note__content__top__group {
+        margin-top: 4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .note__content__top__group .btn {
+          width: 40%; }
+    .note__content__bottom {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .note__content__bottom .heading-3 {
+        font-family: "Rubik", sans-serif;
+        color: #d6ad5c;
+        font-weight: 700;
+        margin-bottom: 4rem; }
+      .note__content__bottom .list__item {
+        font-size: 2.4rem;
+        text-align: center; }
