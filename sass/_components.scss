@@ -2,7 +2,7 @@
   height: 5.6rem;
   padding: 0 1.6rem;
   background-color: $color-primary;
-  color: $color-white !important;
+  color: $color-white;
   text-transform: capitalize;
   font-size: 1.6rem;
   font-weight: 500;
@@ -56,6 +56,25 @@
   }
 }
 
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  &__row {
+    border-collapse: collapse;
+    &__head {
+      text-align: left;
+      padding: 1.6rem 0;
+      text-transform: uppercase;
+      color: $color-primary;
+    }
+    &__cell {
+      text-align: left;
+      border-top: 0.1rem solid #e5e5e5;
+      border-collapse: collapse;
+      padding: 3.2rem 0;
+    }
+  }
+}
 .rating {
   stroke: #f2c94c;
   fill: #f2c94c;
@@ -124,52 +143,4 @@
   // border: 2px solid red;
   width: 50%;
   border-radius: 0.5rem;
-
-  &__content {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-    background-color: #fefefe;
-    border-radius: 0.5rem;
-    // margin: auto;
-    padding: 2.4rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    & > * {
-      &:not(:last-child) {
-        margin-bottom: 1.6rem;
-      }
-    }
-    &__close {
-      color: #aaaaaa;
-      font-size: 28px;
-      align-self: flex-end;
-      font-weight: bold;
-      opacity: 0.8;
-      cursor: pointer;
-      &:hover,
-      &:focus {
-        opacity: 1;
-      }
-    }
-    &__row {
-      width: 100%;
-      & .heading-4 {
-        color: $color-primary;
-      }
-      &__form {
-        width: 100%;
-        & > * {
-          &:not(:last-child) {
-            margin-bottom: 1.6rem;
-          }
-        }
-        & .textarea {
-          width: 100%;
-        }
-        & .btn {
-          width: 50%;
-        }
-      }
-    }
-  }
 }

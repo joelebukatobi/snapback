@@ -49,28 +49,58 @@ $('.testimonial__carousel').owlCarousel({
   },
 });
 
-// Modal
-var modal = document.getElementById('add-note-modal');
-
-// Get the button that opens the modal
-var addNoteBtn = document.getElementById('note-btn');
-
-// Get the <span> element that closes the modal
-var close = document.getElementsByClassName('modal__content__close')[0];
-
-// When the user clicks the button, open the modal
-addNoteBtn.onclick = function () {
-  modal.style.display = 'flex';
-};
-
-// When the user clicks on <span> (x), close the modal
-close.onclick = function () {
-  modal.style.display = 'none';
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
+(function continueCustomization() {
+  let close = document.getElementsByClassName(
+    'continue__modal__content__close'
+  )[0];
+  let modal = document.getElementById('continue-modal');
+  let customizeBtn = document.getElementById('customize-btn');
+  customizeBtn.onclick = function () {
+    modal.style.display = 'flex';
+    // console.log(customizeBtn);
+  };
+  close.onclick = function () {
     modal.style.display = 'none';
-  }
-};
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+})();
+
+(function instruction() {
+  let close = document.getElementsByClassName('note__modal__content__close')[0];
+  let modal = document.getElementById('add-note-modal');
+  let addNoteBtn = document.getElementById('note-btn');
+  addNoteBtn.onclick = function () {
+    modal.style.display = 'flex';
+  };
+  close.onclick = function () {
+    modal.style.display = 'none';
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+})();
+
+(function upload() {
+  let close = document.getElementsByClassName(
+    'upload__modal__content__close'
+  )[0];
+  let modal = document.getElementById('upload-modal');
+  let uploadBtn = document.getElementById('upload-btn');
+  uploadBtn.onclick = function () {
+    modal.style.display = 'flex';
+  };
+  close.onclick = function () {
+    modal.style.display = 'none';
+  };
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
+})();

@@ -16,6 +16,7 @@
   "keywords": [],
   "author": "JetDev",
   "license": "ISC",
+  "homepage": "https://joelebukatobi.github.io/snapback",
   "devDependencies": {
     "auto-prefixer": "^0.4.2",
     "node-sass": "^5.0.0",
