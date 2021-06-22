@@ -300,9 +300,10 @@
       align-items: center;
       & .input {
         width: 100%;
+        background-color: #f6f6f6;
       }
       & .btn {
-        background-color: $color-white;
+        background-color: #f6f6f6;
         position: absolute;
         padding-right: 0;
         right: 1.6rem;
@@ -312,11 +313,16 @@
   }
   &__right {
     display: flex;
-    & img {
+    align-items: center;
+    & svg {
       margin-right: 0.8rem;
+      stroke: black;
+      height: 3.2rem;
+      width: 3.2rem;
     }
     & .paragraph {
-      color: $color-white;
+      color: $color-black;
+      font-weight: 700;
     }
   }
 }
