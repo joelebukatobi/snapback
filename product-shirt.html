@@ -15,7 +15,7 @@
   <div class="container container-menu">
     <div class="menu">
       <div class="menu__left">
-        <a class="menu__left__logo">
+        <a href="index.html" class="menu__left__logo">
           <img src="images/logo.png" alt="">
         </a>
         <div class="menu__left__search">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div>
-        <a class="menu__right" href="">
+        <a class="menu__right" href="cart.html">
           <svg>
             <use href="images/sprite.svg#icon-cart-two"></use>
           </svg>
@@ -62,15 +62,26 @@
               Face Cap
             </a>
           </li>
-          <li class="navbar__nav__list__item">
-            <a class="navbar__nav__list__item__link" href="shirt.html">
+          <li class="navbar__nav__list__item dropdown">
+            <a class="navbar__nav__list__item__link" href="#">
               T-Shirt
             </a>
+            <div class="dropdown-content">
+              <a href="#">View all T-shirts</a>
+              <a href="#">V-neck</a>
+              <a href="#">Round neck</a>
+              <a href="#">Polo</a>
+            </div>
           </li>
-          <li class="navbar__nav__list__item">
-            <a class="navbar__nav__list__item__link" href="our-staff.html">
+          <li class="navbar__nav__list__item dropdown">
+            <a class="navbar__nav__list__item__link" href="#">
               Sales
             </a>
+            <div class="dropdown-content">
+              <a href="#">View all sales</a>
+              <a href="#">T-shirts</a>
+              <a href="#">Caps</a>
+            </div>
           </li>
           <li class="navbar__nav__list__item">
             <a class="navbar__nav__list__item__link" href="gifts.html">
@@ -96,7 +107,7 @@
   <!-- Modal -->
   <div id="continue-modal" class="modal continue__modal">
     <div class="continue__modal__content">
-      <img class="continue__modal__content__close" src="images/icon-close.svg" />
+      <img class="continue____content__close" src="images/icon-close.svg" />
       <h3 class="heading-3">Continue from Previous Design?</h3>
       <p class="paragraph">
         Do you want to continue from a previously uncompleted design
@@ -108,7 +119,9 @@
 
   <!-- product-view -->
   <div class="container">
-    <p class="paragraph heading-link"><a href="">Home</a> > <a href="">T-shirt</a> > <a href="">Black T-shirt</a></p>
+    <p class="paragraph heading-link">
+      <a href="">Home</a> > <a href="">T-shirt</a> > <a href="">Black T-shirt</a>
+    </p>
     <div class="product-view">
       <div class="product-view__view">
         <div class="product-view__view__categories">

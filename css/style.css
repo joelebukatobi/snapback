@@ -258,9 +258,33 @@ body {
       display: flex;
       justify-content: space-between;
       align-items: center; }
+      .navbar__nav__list .dropdown .dropdown-content a {
+        float: none;
+        color: #000000;
+        padding: 0.8rem 1.6rem;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 1.6rem; }
+        .navbar__nav__list .dropdown .dropdown-content a:hover {
+          color: #ffffff;
+          background-color: #d6ad5c; }
+      .navbar__nav__list .dropdown .dropdown-content {
+        border-radius: 0.5rem;
+        display: none;
+        position: absolute;
+        background-color: #e6e6e6;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1; }
+      .navbar__nav__list .dropdown:hover .dropdown-content {
+        display: block; }
       .navbar__nav__list__item {
         list-style: none;
-        float: left; }
+        float: left;
+        position: relative;
+        display: inline-block; }
         .navbar__nav__list__item:not(:last-child) {
           margin-right: 4.8rem; }
         .navbar__nav__list__item__link {
@@ -781,6 +805,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: 2.4rem 0; }
+  .shirt__heading__link {
+    margin-bottom: 3.2rem; }
   .shirt__heading__section {
     display: flex;
     justify-content: space-between; }

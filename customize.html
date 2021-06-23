@@ -15,7 +15,7 @@
   <div class="container container-menu">
     <div class="menu">
       <div class="menu__left">
-        <a class="menu__left__logo">
+        <a href="index.html" class="menu__left__logo">
           <img src="images/logo.png" alt="">
         </a>
         <div class="menu__left__search">
@@ -24,7 +24,7 @@
         </div>
       </div>
       <div>
-        <a class="menu__right" href="">
+        <a class="menu__right" href="cart.html">
           <svg>
             <use href="images/sprite.svg#icon-cart-two"></use>
           </svg>
@@ -62,15 +62,26 @@
               Face Cap
             </a>
           </li>
-          <li class="navbar__nav__list__item">
-            <a class="navbar__nav__list__item__link" href="shirt.html">
+          <li class="navbar__nav__list__item dropdown">
+            <a class="navbar__nav__list__item__link" href="#">
               T-Shirt
             </a>
+            <div class="dropdown-content">
+              <a href="#">View all T-shirts</a>
+              <a href="#">V-neck</a>
+              <a href="#">Round neck</a>
+              <a href="#">Polo</a>
+            </div>
           </li>
-          <li class="navbar__nav__list__item">
-            <a class="navbar__nav__list__item__link" href="our-staff.html">
+          <li class="navbar__nav__list__item dropdown">
+            <a class="navbar__nav__list__item__link" href="#">
               Sales
             </a>
+            <div class="dropdown-content">
+              <a href="#">View all sales</a>
+              <a href="#">T-shirts</a>
+              <a href="#">Caps</a>
+            </div>
           </li>
           <li class="navbar__nav__list__item">
             <a class="navbar__nav__list__item__link" href="gifts.html">
@@ -104,6 +115,27 @@
       <button class="btn">Continue</button>
       <button class="btn">Cancel</button>
     </form>
+    <script>
+      (function continueCustomization() {
+        let close = document.getElementsByClassName(
+          'continue__modal__content__close'
+        )[0];
+        let modal = document.getElementById('continue-modal');
+        let customizeBtn = document.getElementById('customize-btn');
+        customizeBtn.onclick = function () {
+          modal.style.display = 'flex';
+          // console.log(customizeBtn);
+        };
+        close.onclick = function () {
+          modal.style.display = 'none';
+        };
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        };
+      })();
+    </script>
   </div>
 
   <!-- Upload Modal -->
@@ -119,7 +151,24 @@
       <input type="file" class="input">
     </form>
     <script>
-
+      (function upload() {
+        let close = document.getElementsByClassName(
+          'upload__modal__content__close'
+        )[0];
+        let modal = document.getElementById('upload-modal');
+        let uploadBtn = document.getElementById('upload-btn');
+        uploadBtn.onclick = function () {
+          modal.style.display = 'flex';
+        };
+        close.onclick = function () {
+          modal.style.display = 'none';
+        };
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        };
+      })();
     </script>
   </div>
 
@@ -172,6 +221,24 @@
                 </form>
               </div>
             </div>
+            <script>
+              (function instruction() {
+                let close = document.getElementsByClassName('note__modal__content__close')[0];
+                let modal = document.getElementById('add-note-modal');
+                let addNoteBtn = document.getElementById('note-btn');
+                addNoteBtn.onclick = function () {
+                  modal.style.display = 'flex';
+                };
+                close.onclick = function () {
+                  modal.style.display = 'none';
+                };
+                window.onclick = function (event) {
+                  if (event.target == modal) {
+                    modal.style.display = 'none';
+                  }
+                };
+              })();
+            </script>
           </div>
         </div>
         <div class="customize-product__main__section">
