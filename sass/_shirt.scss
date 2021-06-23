@@ -4,6 +4,10 @@
     flex-direction: column;
     padding: 2.4rem 0;
 
+    &__link {
+      margin-bottom: 3.2rem;
+    }
+
     &__section {
       display: flex;
       justify-content: space-between;
