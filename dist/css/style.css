@@ -817,14 +817,24 @@ body {
       display: flex;
       width: 56rem;
       flex-direction: column; }
-      .contact__form__section > * {
-        margin-bottom: 4rem; }
       .contact__form__section__group {
         width: 100%;
         display: flex;
         justify-content: space-between; }
-        .contact__form__section__group > * {
+        .contact__form__section__group__input {
           width: 49%; }
+          .contact__form__section__group__input .paragraph {
+            margin-top: 0.8rem;
+            color: #ffffff;
+            font-weight: 300; }
+          .contact__form__section__group__input > * {
+            width: 100%; }
+      .contact__form__section > * {
+        margin-bottom: 4rem; }
+        .contact__form__section > *:nth-child(2) {
+          width: 100%; }
+          .contact__form__section > *:nth-child(2) > * {
+            width: 100%; }
 
 .shirt__heading {
   display: flex;
