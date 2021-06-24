@@ -813,6 +813,30 @@ body {
         width: 40rem; }
       .contact__form__heading .paragraph {
         color: #ffffff; }
+      .contact__form__heading__success {
+        margin-top: 1.6rem;
+        padding: 1.6rem;
+        background-color: rgba(214, 173, 92, 0.1);
+        border-radius: 0.5rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .contact__form__heading__success .close {
+          font-family: "Rubik", sans-serif;
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: #eb5757;
+          background-color: rgba(255, 255, 255, 0.1);
+          padding: 0 0.7rem;
+          border-radius: 50%;
+          opacity: 0.5; }
+          .contact__form__heading__success .close:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 0 0.8rem;
+            border-radius: 50%;
+            opacity: 1;
+            cursor: pointer; }
     .contact__form__section {
       display: flex;
       width: 56rem;
