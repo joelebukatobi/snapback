@@ -389,6 +389,34 @@
       & .paragraph {
         color: $color-white;
       }
+
+      &__success {
+        margin-top: 1.6rem;
+        padding: 1.6rem;
+        background-color: rgba($color-primary, 0.1);
+        border-radius: 0.5rem;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & .close {
+          font-family: $font-secondary;
+          font-size: 1.6rem;
+          font-weight: 700;
+          color: #eb5757;
+          background-color: rgba($color-white, 0.1);
+          padding: 0 0.7rem;
+          border-radius: 50%;
+          opacity: 0.5;
+          &:hover {
+            background-color: rgba($color-white, 0.5);
+            padding: 0 0.8rem;
+            border-radius: 50%;
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+      }
     }
     &__section {
       display: flex;

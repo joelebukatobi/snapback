@@ -507,6 +507,17 @@
         <h1 class="heading-3">Stay Updated with our
           Latest News & Promotions</h1>
         <p class="paragraph">Subscribe to our newsletter</p>
+        <div class="contact__form__heading__success" id="success">
+          <p class="paragraph">Message sent successfully</p>
+          <span class="close" id="close-button" onclick="closeSuccess()">X</span>
+          <script>
+            function closeSuccess() {
+              let closeBtn = document.getElementById('close-button');
+              let successMessage = document.getElementById('success')
+              successMessage.style.display = "none"
+            }
+          </script>
+        </div>
       </div>
       <div class="contact__form__section">
         <div class="contact__form__section__group">
@@ -537,11 +548,9 @@
         <h4 class="heading-4 footer__column__title">STORE</h4>
         <div class="footer__column__group">
           <ul class="footer__column__group__list">
-            <li class=" paragraph footer__column__group__list__item">Face Cap</li>
-            <li class=" paragraph footer__column__group__list__item">T-Shirt</li>
-            <li class=" paragraph footer__column__group__list__item">Sale</li>
-            <li class=" paragraph footer__column__group__list__item">Popular</li>
-            <li class=" paragraph footer__column__group__list__item">Gift</li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Face Cap</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">T-Shirt</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Sale</a></li>
           </ul>
         </div>
       </div>
@@ -549,17 +558,16 @@
         <h4 class="heading-4 footer__column__title">USEFUL LINKS</h4>
         <div class="footer__column__group">
           <ul class="footer__column__group__list">
-            <li class=" paragraph footer__column__group__list__item">Contact Us</li>
-            <li class=" paragraph footer__column__group__list__item">FAQ</li>
-            <li class=" paragraph footer__column__group__list__item">Terms & Conditions</li>
-            <li class=" paragraph footer__column__group__list__item">Privacy Policy </li>
-            <li class=" paragraph footer__column__group__list__item">Shipping</li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Contact Us</a> </li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Shipping</a> </li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Terms & Conditions</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Privacy Policy</a></li>
           </ul>
           <ul class="footer__column__group__list">
-            <li class=" paragraph footer__column__group__list__item">Cancellation</li>
-            <li class=" paragraph footer__column__group__list__item">Blog</li>
-            <li class=" paragraph footer__column__group__list__item">Carreers</li>
-            <li class=" paragraph footer__column__group__list__item">About Us</li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Cancellation</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Blog</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">Careers</a></li>
+            <li class=" paragraph footer__column__group__list__item"><a href="">About Us</a></li>
           </ul>
         </div>
       </div>
