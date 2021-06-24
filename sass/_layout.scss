@@ -51,7 +51,7 @@
           display: none;
           position: absolute;
           background-color: #e6e6e6;
-          min-width: 160px;
+          min-width: 24rem;
           overflow: auto;
           box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
           z-index: 1;
@@ -362,18 +362,28 @@
   justify-content: space-between;
   padding: 8rem 0;
   &__column {
-    width: 35%;
-    &:last-of-type {
-      width: 25%;
+    &:nth-of-type(1) {
+      width: 20%;
     }
-    &__last {
+    &:nth-of-type(2) {
+      width: 30%;
+    }
+    &:nth-of-type(3) {
+      width: 25%;
       display: flex;
-      justify-content: flex-end;
-      margin-top: 5.6rem;
+      padding-top: 5.6rem;
       & .paragraph {
         margin-left: 1.6rem;
         width: 20rem;
       }
+      & img {
+        height: 4.8rem;
+        width: 5.6rem;
+      }
+    }
+    &:nth-of-type(4) {
+      width: 25%;
+      padding-top: 5.6rem;
     }
     &__title {
       margin-bottom: 2.4rem;
@@ -388,6 +398,28 @@
           list-style: none;
           &:not(:last-of-type) {
             margin-bottom: 1.6rem;
+          }
+        }
+      }
+    }
+
+    &__icons {
+      margin-top: 2.4rem;
+      display: flex;
+      & > * {
+        &:not(:last-child) {
+          margin-right: 2.4rem;
+        }
+      }
+      & a {
+        & svg {
+          height: 2.4rem;
+          width: 2.4rem;
+          fill: $color-white;
+        }
+        &:hover {
+          & svg {
+            fill: $color-primary;
           }
         }
       }

@@ -32,10 +32,19 @@
       }
     }
   }
-  .owl-dots {
-    z-index: 5;
-    // border: 2px solid red;
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    position: relative;
+    z-index: 10;
     margin: 0 auto;
+    margin-top: -5em;
+    width: 100%;
+  }
+  .owl-theme .owl-dots .owl-dot.active span,
+  .owl-theme .owl-dots .owl-dot:hover span {
+    background: $color-primary;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    background: $color-white;
   }
 }
 
@@ -386,7 +395,7 @@
       width: 56rem;
       flex-direction: column;
       & > * {
-        margin-bottom: 2.4rem;
+        margin-bottom: 4rem;
       }
       &__group {
         width: 100%;
