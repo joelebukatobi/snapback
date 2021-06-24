@@ -54,16 +54,27 @@
         </div>
       </div>
 
+
+
       <!-- Navbar -->
       <nav class="navbar__nav">
         <ul class="navbar__nav__list">
-          <li class="navbar__nav__list__item">
+          <li class="navbar__nav__list__item dropdown">
             <a class="navbar__nav__list__item__link active" href="caps.html">
               Face Cap
             </a>
+            <div class="dropdown-content">
+              <a href="#">View all Face Caps</a>
+              <a href="#">Net</a>
+              <a href="#">Cloth</a>
+              <a href="#">Rimless</a>
+              <a href="#">Flat-mouth</a>
+              <a href="#">Light</a>
+              <a href="#">Bucket Caps</a>
+            </div>
           </li>
           <li class="navbar__nav__list__item dropdown">
-            <a class="navbar__nav__list__item__link" href="#">
+            <a class="navbar__nav__list__item__link" href="shirt.html">
               T-Shirt
             </a>
             <div class="dropdown-content">
@@ -74,7 +85,7 @@
             </div>
           </li>
           <li class="navbar__nav__list__item dropdown">
-            <a class="navbar__nav__list__item__link" href="#">
+            <a class="navbar__nav__list__item__link" href="sales.html">
               Sales
             </a>
             <div class="dropdown-content">
@@ -116,16 +127,16 @@
       <button class="btn">Cancel</button>
     </form>
     <script>
-      (function continueCustomization() {
+      function customize() {
         let close = document.getElementsByClassName(
           'continue__modal__content__close'
         )[0];
         let modal = document.getElementById('continue-modal');
-        let customizeBtn = document.getElementById('customize-btn');
-        customizeBtn.onclick = function () {
-          modal.style.display = 'flex';
-          // console.log(customizeBtn);
-        };
+        // let customizeBtn = document.getElementById('customize-btn');
+        // customizeBtn.onclick = function () {
+        modal.style.display = 'flex';
+        // console.log(customizeBtn);
+        // };
         close.onclick = function () {
           modal.style.display = 'none';
         };
@@ -134,7 +145,7 @@
             modal.style.display = 'none';
           }
         };
-      })();
+      };
     </script>
   </div>
 
@@ -151,15 +162,15 @@
       <input type="file" class="input">
     </form>
     <script>
-      (function upload() {
+      function upload() {
         let close = document.getElementsByClassName(
           'upload__modal__content__close'
         )[0];
         let modal = document.getElementById('upload-modal');
-        let uploadBtn = document.getElementById('upload-btn');
-        uploadBtn.onclick = function () {
-          modal.style.display = 'flex';
-        };
+        // let uploadBtn = document.getElementById('upload-btn');
+        // uploadBtn.onclick = function () {
+        modal.style.display = 'flex';
+        // };
         close.onclick = function () {
           modal.style.display = 'none';
         };
@@ -168,11 +179,36 @@
             modal.style.display = 'none';
           }
         };
-      })();
+      };
     </script>
   </div>
 
-  <div class="container">
+  <!-- Upload Modal -->
+  <div id="thanks-modal" class="modal thanks__modal">
+    <form class="thanks__modal__content">
+      <img src="images/icon-order.svg" alt="">
+      <h3 class="heading-3">Thanks for your Order</h3>
+      <p class="paragraph">Your product will be delivered in</p>
+      <h5 class="heading-5">24 days</h5>
+      <a href="index.html">
+        <button class="btn"> Go back to Homepage</button>
+      </a>
+    </form>
+    <script>
+      function thanks() {
+        let modal = document.getElementById('thanks-modal');
+        modal.style.display = 'flex';
+
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        };
+      };
+    </script>
+  </div>
+
+  <div class=" container">
     <div class="customize-product">
       <div class="customize-product__header">
         <div class="customize-product__header__row">
@@ -201,9 +237,9 @@
         <div class="customize-product__main__section">
           <div class="customize-product__main__section__buttons">
             <button class="btn">Add Text</button>
-            <button class="btn" id="upload-btn">Upload Image or Logo</button>
-            <button class="btn">Change Product</button>
-            <button class="btn" id="note-btn">Add Note/Instruction</button>
+            <button class="btn" onclick="upload()">Upload Image or Logo</button>
+            <button class="btn" onclick="thanks()">Change Product</button>
+            <button class="btn" onclick="instruction()">Add Note/Instruction</button>
           </div>
           <div id="add-note-modal" class="modal note__modal">
             <div class="note__modal__content">
@@ -222,13 +258,13 @@
               </div>
             </div>
             <script>
-              (function instruction() {
+              function instruction() {
                 let close = document.getElementsByClassName('note__modal__content__close')[0];
                 let modal = document.getElementById('add-note-modal');
-                let addNoteBtn = document.getElementById('note-btn');
-                addNoteBtn.onclick = function () {
-                  modal.style.display = 'flex';
-                };
+                // let addNoteBtn = document.getElementById('note-btn');
+                // addNoteBtn.onclick = function () {
+                modal.style.display = 'flex';
+                // };
                 close.onclick = function () {
                   modal.style.display = 'none';
                 };
@@ -237,7 +273,7 @@
                     modal.style.display = 'none';
                   }
                 };
-              })();
+              };
             </script>
           </div>
         </div>
@@ -262,7 +298,7 @@
         </div>
       </div>
       <div class="customize-product__buttons">
-        <button id="customize-btn" class="btn ">Customize Size/Quantity</button>
+        <button onclick="customize()" class="btn ">Customize Size/Quantity</button>
         <button class="btn">
           <svg>
             <use href="images/sprite.svg#icon-cart"></use>
