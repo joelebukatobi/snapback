@@ -99,9 +99,11 @@
 .works {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: #fefdfc;
   padding-top: 6.4rem;
   padding-bottom: 9.6rem;
+  // width: 100%;
   &__heading {
     width: 100%;
     display: flex;
@@ -118,11 +120,33 @@
   }
   &__process {
     padding: 8rem 8rem 0 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     &__row {
       display: flex;
       justify-content: space-between;
-      &:first-of-type {
-        margin-bottom: 4.8rem;
+      width: 100%;
+      position: relative;
+      &:nth-of-type(2) {
+        height: 10.4rem;
+      }
+      &:nth-of-type(3) {
+        & > * {
+          &:nth-child(1) {
+            background-color: #faf5eb;
+          }
+        }
+      }
+      &__line-one,
+      &__line-three {
+        width: 20%;
+      }
+      &__line-two {
+        left: 87%;
+        position: absolute;
+        height: 100%;
       }
       &__card {
         border: 0.2rem solid $color-primary;
@@ -140,6 +164,10 @@
           width: 24rem;
         }
       }
+    }
+    & .btn {
+      width: 20%;
+      margin-top: 7.2rem;
     }
   }
 }
@@ -291,9 +319,19 @@
       text-align: left;
     }
   }
+
   &__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     & .item {
+      height: 16em;
+      width: 16rem;
+      margin: 0 auto;
       & img {
+        height: 100%;
+        width: 100%;
         opacity: 0.3;
         &:hover {
           opacity: 1;

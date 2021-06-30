@@ -116,7 +116,7 @@
   <!-- Shirt -->
   <div class="container">
     <div class="shirt">
-      <div class="shirt__heading">
+      <form class="shirt__heading">
         <p class="paragraph shirt__heading__link"><a href=""><strong>Home</strong></a> > <a href="">Caps</a></p>
         <div class="shirt__heading__content">
           <h2 class="heading-2">Caps</h2>
@@ -136,7 +136,46 @@
               <img src="images/icon-chevron-down.svg" alt="">
             </div>
           </div>
-          <div class="shirt__heading__section__slider"></div>
+          <div class="shirt__heading__section__slider">
+            <div class="range-slider">
+              <p class="paragraph" id="slide-start"></p>
+              <div class="slider">
+                <input value="1000" min="1000" max="50000" step="500" type="range">
+                <input value="50000" min="1000" max="50000" step="500" type="range">
+              </div>
+              <p class="paragraph" id="slide-end"></p>
+            </div>
+            <script>
+              function getVals() {
+                // Get slider values
+                let parent = this.parentNode;
+                let slides = parent.getElementsByTagName("input");
+                let slide1 = parseFloat(slides[0].value);
+                let slide2 = parseFloat(slides[1].value);
+                // Neither slider will clip the other, so make sure we determine which is larger
+                if (slide1 > slide2) { let tmp = slide2; slide2 = slide1; slide1 = tmp; }
+
+                // let displayElement = parent.getElementsByClassName("rangeValues")[0];
+                document.getElementById("slide-start").innerHTML = "$" + slide1;
+                document.getElementById("slide-end").innerHTML = "$" + slide2;
+              }
+
+              window.onload = function () {
+                // Initialize Sliders
+                let sliderSections = document.getElementsByClassName("range-slider");
+                for (let x = 0; x < sliderSections.length; x++) {
+                  let sliders = sliderSections[x].getElementsByTagName("input");
+                  for (let y = 0; y < sliders.length; y++) {
+                    if (sliders[y].type === "range") {
+                      sliders[y].oninput = getVals;
+                      // Manually trigger event first time to display values
+                      sliders[y].oninput();
+                    }
+                  }
+                }
+              }
+            </script>
+          </div>
           <div class="shirt__heading__section__dropdown">
             <div class="shirt__heading__section__dropdown__group">
               <label for="select"> </label>
@@ -162,7 +201,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 
@@ -173,7 +212,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -186,7 +227,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-four.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-four.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -199,7 +242,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -212,7 +257,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -227,7 +274,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -240,7 +289,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-four.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -253,7 +304,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -266,7 +319,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -281,7 +336,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -294,7 +351,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-four.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -307,7 +366,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -320,7 +381,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -335,7 +398,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -348,7 +413,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-four.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -361,7 +428,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -374,7 +443,9 @@
         <div class="tshirts__row__card">
           <div class="tshirts__row__card__image">
             <h5 class="heading-5">10% Off</h5>
-            <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            <a href="product-caps.html">
+              <img src="images/card-image-one.png" alt="" class="tshirts__row__card__image__picture">
+            </a>
             <div class="tshirts__row__card__image__icon">
               <a href="">
                 <img src="images/icon-heart.svg" alt="" class="">
@@ -385,7 +456,7 @@
           <p class="paragraph">N5,000</p>
         </div>
       </div>
-      <div class="tshirts__pagination">
+      <form method="" action="" class="tshirts__pagination">
         <h5 class="heading-5">Showing 20 of 1500 products</h5>
         <div class="tshirts__pagination__group">
           <button class="btn"><img src="images/pagination-left.svg" alt=""></button>
@@ -395,7 +466,7 @@
           <a class="tshirts__pagination__group__link" href="">4</a>
           <button class="btn"><img src="images/pagination-right.svg" alt=""></button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 
