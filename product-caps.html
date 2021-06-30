@@ -182,17 +182,14 @@
         </div>
         <div class="product-view__details__bottom">
           <div class="product-view__details__bottom__row">
-            <div class="product-view__details__bottom__row__left">
+            <!-- <div class="product-view__details__bottom__row__left">
               <div class="heading">
-                <p class="paragraph">Size</p>
+                <p class="paragraph">Stock Available</p>
               </div>
               <div class="product-view__details__bottom__row__left__type">
-                <button class="btn">S</button>
-                <button class="btn">M</button>
-                <button class="btn">L</button>
-                <button class="btn">XL</button>
+                <p class="paragraph">100</p>
               </div>
-            </div>
+            </div> -->
             <div class="product-view__details__bottom__row__right">
               <div class="heading">
                 <p class="paragraph">Stock Availability</p>
@@ -215,7 +212,9 @@
                 <use href="images/sprite.svg#icon-cart"></use>
               </svg> Add to product-view
             </button>
-            <button class="btn">Customize</button>
+            <button class="btn" id="customize-btn" onclick="location.href='http://127.0.0.1:5500/dist/customize.html';">
+              Customize Now
+            </button>
           </div>
         </div>
       </div>
@@ -255,27 +254,30 @@
   <div class="container">
     <div class="reviews">
       <div class="reviews__customer">
-        <p class="paragraph">Customer Reviews (12)</p>
-        <div class="reviews__customer__content">
-          <div class="reviews__customer__content__ratings">
-            <svg class="rating">
-              <use xlink:href="images/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="rating">
-              <use xlink:href="images/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="rating">
-              <use xlink:href="images/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="rating">
-              <use xlink:href="images/sprite.svg#icon-star"></use>
-            </svg>
-            <svg class="rating">
-              <use xlink:href="images/sprite.svg#icon-star"></use>
-            </svg>
+        <div class="reviews__customer__group">
+          <p class="paragraph">Overall Reviews (12)</p>
+          <div class="reviews__customer__group__content">
+            <div class="reviews__customer__group__content__ratings">
+              <svg class="rating">
+                <use xlink:href="images/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="rating">
+                <use xlink:href="images/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="rating">
+                <use xlink:href="images/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="rating">
+                <use xlink:href="images/sprite.svg#icon-star"></use>
+              </svg>
+              <svg class="rating">
+                <use xlink:href="images/sprite.svg#icon-star"></use>
+              </svg>
+            </div>
+            <p class="rating-text">4.0<strong>(21)</strong></p>
           </div>
-          <p class="rating-text">4.0<strong>(21)</strong></p>
         </div>
+        <button class="btn">Write Review</button>
       </div>
       <div class="reviews__recent">
         <div class="reviews__recent__heading">
@@ -512,8 +514,6 @@
       </div>
     </div>
   </div>
-
-
 
   <!-- Footer -->
   <div class="container">
