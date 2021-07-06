@@ -1,7 +1,7 @@
 .product-view {
   display: flex;
   justify-content: space-between;
-  margin: 4.8rem 0;
+  margin: 4.8rem 0 16rem 0;
   &__view {
     display: flex;
     width: 45%;
@@ -34,8 +34,29 @@
         }
       }
       & .share {
-        height: 2.4rem;
-        width: 2.4rem;
+        position: relative;
+        margin-bottom: 4rem;
+        & svg {
+          height: 2.4rem;
+          width: 2.4rem;
+          margin-bottom: 1.6rem;
+        }
+
+        & .icons__modal {
+          // position: fixed;
+          overflow: auto;
+          box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+          width: 37.1rem;
+          height: 9.2rem;
+          padding: 0 1.6rem;
+          background-color: $color-white;
+          &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+          }
+        }
       }
     }
     &__image {
@@ -184,12 +205,84 @@
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    flex-direction: column;
+    padding: 2.4rem;
+    width: 100%;
+    margin-bottom: 8rem;
+    &__view {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+    &__details {
+      width: 100%;
+      &__top {
+        width: 100%;
+        & > * {
+          &:not(:last-child) {
+            margin-bottom: 2.4rem;
+          }
+        }
+        &__pricing {
+          width: 80%;
+          & > * {
+            margin-right: 0;
+          }
+          justify-content: space-between;
+        }
+
+        &__rating {
+          &__icons {
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+      &__bottom {
+        display: flex;
+        flex-wrap: wrap;
+        &__row {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          & > * {
+            &:nth-child(1) {
+              width: 55%;
+            }
+            &:nth-child(2) {
+              width: 40%;
+            }
+          }
+          &__left {
+            &__type {
+              width: 100%;
+              & .btn {
+                padding-left: 1.6rem;
+                padding-right: 1.6rem;
+                height: 4.8rem;
+                width: 4.8rem;
+              }
+            }
+          }
+        }
+        &__buttons {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          & > * {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
 }
 
 .reviews {
   &__customer {
     display: flex;
-    // flex-direction: column;
     align-items: center;
     margin-bottom: 3.2rem;
 
@@ -276,6 +369,59 @@
       align-self: center;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__customer {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 7.2rem;
+      &__group {
+        width: 100%;
+        margin-bottom: 2.4rem;
+        &__content {
+          width: 100%;
+          align-items: center;
+          &__ratings {
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+    &__recent {
+      &__heading {
+        margin-bottom: 4rem;
+      }
+      &__row {
+        flex-direction: column;
+        &__content {
+          width: 100%;
+          margin-bottom: 7.2rem;
+          &__heading {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            &__ratings {
+              width: 60%;
+              &__icons {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+              }
+            }
+          }
+        }
+      }
+
+      & .btn {
+        margin: 0rem 0 4rem 0;
+        align-self: unset;
+        width: 100%;
+      }
+    }
+  }
 }
 
 .product {
@@ -310,5 +456,16 @@
   }
   &__two {
     margin-bottom: 8 rem;
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__row {
+      flex-direction: column;
+      &__section {
+        width: 100%;
+        margin-bottom: 4rem;
+      }
+    }
   }
 }

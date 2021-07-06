@@ -1,20 +1,23 @@
 .header {
-  max-width: 1920px;
-  margin: 0 auto;
+  background-color: #e5e5e5;
+  height: 76.8rem;
   &__carousel {
+    height: 100%;
     &__item {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
       &__bg {
-        width: 100%;
         overflow-y: hidden;
+        width: 50rem;
+        height: 100%;
         & img {
-          margin-top: -16rem;
           width: 100%;
-          max-width: 1920px;
         }
       }
       &__text {
-        position: absolute;
-        top: 24rem;
+        // height: 100%;
         & .heading-1 {
           width: 48rem;
           font-family: $font-secondary;
@@ -36,7 +39,7 @@
     position: relative;
     z-index: 10;
     margin: 0 auto;
-    margin-top: -5em;
+    margin-top: -10rem;
     width: 100%;
   }
   .owl-theme .owl-dots .owl-dot.active span,
@@ -45,6 +48,48 @@
   }
   .owl-theme .owl-dots .owl-dot span {
     background: $color-white;
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    height: 120rem;
+    &__carousel {
+      &__item {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        &__bg {
+          height: 72rem;
+          & img {
+            height: 100%;
+          }
+        }
+        &__text {
+          width: 100%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 9.6rem;
+          & .heading-1 {
+            // width: 50%;
+            margin-bottom: 1.6rem;
+            text-align: center;
+          }
+          & .paragraph {
+            width: 24rem;
+            text-align: center;
+          }
+          & .btn {
+            margin-top: 2.4rem;
+          }
+        }
+      }
+    }
+    .owl-theme .owl-nav.disabled + .owl-dots {
+      margin-top: -8em;
+    }
   }
 }
 
@@ -91,6 +136,20 @@
           background-color: $color-white;
           border-radius: 50%;
         }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+
+    &__row {
+      flex-wrap: wrap;
+      &__card {
+        // flex-shrink: 2;
+        width: 47%;
+        margin-bottom: 2.4rem;
       }
     }
   }
@@ -170,6 +229,52 @@
       margin-top: 7.2rem;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    &__heading {
+      margin-bottom: 2.4rem;
+      & .paragraph {
+        width: 65%;
+      }
+    }
+
+    &__process {
+      padding: 2.4rem 2.4rem 0 2.4rem;
+      &__row {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        &:nth-of-type(3) {
+          flex-direction: column-reverse;
+        }
+        height: 50rem;
+        &__card {
+          padding: 2.4rem 4rem;
+          width: 90%;
+          // margin-bottom: 8rem;
+        }
+        &__line-one,
+        &__line-three {
+          width: 2%;
+          height: 20%;
+          // border:
+          // transform: rotate(-90deg);
+          content: url(../images/icon-line-four.png);
+        }
+        &__line-two {
+          left: 50%;
+          position: absolute;
+          height: 100%;
+        }
+      }
+      & .btn {
+        width: 50%;
+        margin-top: 7.2rem;
+      }
+    }
+  }
 }
 
 .swag {
@@ -236,11 +341,23 @@
       }
     }
   }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    flex-direction: column;
+    padding: 2.4rem;
+    &__left {
+      width: 100%;
+    }
+    &__right {
+      width: 100%;
+    }
+  }
 }
 
 .customize {
   position: relative;
   height: 51rem;
+  width: 100%;
   display: flex;
   align-items: center;
   margin-top: 6.4rem;
@@ -266,6 +383,22 @@
 
     & .btn {
       margin-top: 4.8rem;
+    }
+  }
+  @media (min-width: 320px) and (max-width: 576px) {
+    // padding: 2.4rem;
+    height: 40rem;
+    width: 100%;
+    &__bg {
+      padding: 2.4rem;
+      height: 100%;
+      width: 100%;
+      // border: 2px solid red;
+      &__image {
+        height: 100%;
+        width: 100%;
+        // border: 2px solid blue;
+      }
     }
   }
 }
@@ -299,6 +432,18 @@
       padding: 3.2rem;
       & .paragraph {
         color: $color-primary;
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    &__row {
+      flex-direction: column;
+      &__card {
+        width: 100%;
+        margin-bottom: 3.2rem;
       }
     }
   }
@@ -339,6 +484,16 @@
       }
     }
   }
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__heading {
+      & .heading-3 {
+        // border: 2px solid red;
+        text-align: center;
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
 }
 
 .testimonial {
@@ -361,7 +516,7 @@
     &__content {
       padding-top: 5.6rem;
       padding-bottom: 5.6rem;
-      max-width: 100%;
+      width: 100%;
       position: relative;
       border: 0.2rem solid #faf5eb;
       border-radius: 1.6rem;
@@ -392,6 +547,15 @@
         margin-top: 3.2rem;
         font-weight: 700;
         color: $color-primary;
+      }
+    }
+  }
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__carousel {
+      width: 100%;
+      &__content {
+        width: 100%;
       }
     }
   }
@@ -483,6 +647,34 @@
           width: 100%;
           & > * {
             width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    &__bg {
+      display: none;
+    }
+    &__form {
+      padding: 8rem 3.2rem;
+      width: 100%;
+      &__heading {
+        width: 100%;
+        & .heading-3 {
+          width: 100%;
+        }
+      }
+      &__section {
+        width: 100%;
+        &__group {
+          flex-direction: column;
+          &__input {
+            width: 100%;
+            &:nth-of-type(1) {
+              margin-bottom: 4rem;
+            }
           }
         }
       }

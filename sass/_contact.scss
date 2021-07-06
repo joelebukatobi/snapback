@@ -72,5 +72,16 @@
     &__group {
       color: #291f0a;
     }
+
+    @media (min-width: 320px) and (max-width: 576px) {
+      flex-direction: column;
+      &__group {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
   }
 }

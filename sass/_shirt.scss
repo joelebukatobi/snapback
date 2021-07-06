@@ -74,6 +74,25 @@
       }
     }
   }
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__heading {
+      &__content {
+        display: none;
+      }
+      &__section {
+        &__dropdown {
+          display: none;
+          &:nth-of-type(1) {
+            display: unset;
+          }
+        }
+        &__slider {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 .tshirts {
@@ -165,6 +184,31 @@
           height: 100%;
           width: 100%;
         }
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 2.4rem;
+    &__row {
+      flex-wrap: wrap;
+      &__card {
+        width: 45%;
+        margin-bottom: 4rem;
+      }
+    }
+
+    &__pagination {
+      flex-direction: column;
+      & .heading-5 {
+        width: 80%;
+        margin-right: 0;
+        text-align: center;
+        margin-bottom: 3.2rem;
+      }
+      &__group {
+        width: 70%;
+        justify-content: space-between;
       }
     }
   }

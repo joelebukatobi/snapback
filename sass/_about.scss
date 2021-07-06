@@ -29,8 +29,17 @@
       width: 100%;
     }
   }
+
+  @media (min-width: 320px) and (max-width: 576px) {
+    &__content {
+      padding-left: 2.4rem;
+    }
+  }
 }
 
 .about-text {
   padding: 8rem 16rem;
+  @media (min-width: 320px) and (max-width: 576px) {
+    padding: 8rem 2.4rem;
+  }
 }

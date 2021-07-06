@@ -18,18 +18,25 @@
         <a href="index.html" class="menu__left__logo">
           <img src="images/logo.png" alt="">
         </a>
-        <div class="menu__left__search">
+        <form action="" method="" class="menu__left__search">
           <input class="input" type="search" placeholder="Search by over 5000 caps, beanies and hats...">
           <button class="btn"><img src="images/icon-search.svg" alt=""></button>
-        </div>
+        </form>
       </div>
-      <div>
-        <a class="menu__right" href="cart.html">
+      <div class="menu__right">
+        <a class="menu__right__cart" href="cart.html">
           <svg>
             <use href="images/sprite.svg#icon-cart-two"></use>
           </svg>
           <p class="paragraph">Cart</p>
         </a>
+
+        <!-- Navbar Menu -->
+        <div class="navbar__mobile__menu">
+          <div class="navbar__mobile__menu__bar"></div>
+          <div class="navbar__mobile__menu__bar"></div>
+          <div class="navbar__mobile__menu__bar"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -40,17 +47,10 @@
     <div class="navbar">
       <div class="navbar__mobile">
         <!-- Navbar Logo -->
-        <!-- <div class="navbar__mobile__logo">
-     <a class="navbar__mobile__logo__link" href="index.html" title="navbar">
-      <img class="navbar__mobile__logo__link__img" src="images/nav-logo.png" alt="">
-     </a>
-    </div> -->
-
-        <!-- Navbar Menu -->
-        <div class="navbar__mobile__menu">
-          <div class="navbar__mobile__menu__bar"></div>
-          <div class="navbar__mobile__menu__bar"></div>
-          <div class="navbar__mobile__menu__bar"></div>
+        <div class="navbar__mobile__logo">
+          <a class="navbar__mobile__logo__link" href="index.html" title="navbar">
+            <img class="navbar__mobile__logo__link__img" src="images/logo.png" alt="">
+          </a>
         </div>
       </div>
 
@@ -113,19 +113,6 @@
 
   </div>
 
-  <!-- Modal -->
-  <div id="continue-modal" class="modal continue__modal">
-    <div class="continue__modal__content">
-      <img class="continue____content__close" src="images/icon-close.svg" />
-      <h3 class="heading-3">Continue from Previous Design?</h3>
-      <p class="paragraph">
-        Do you want to continue from a previously uncompleted design
-      </p>
-      <button class="btn">Continue</button>
-      <button class="btn">Cancel</button>
-    </div>
-  </div>
-
   <!-- product-view -->
   <div class="container">
     <p class="paragraph heading-link">
@@ -148,9 +135,33 @@
               <img src="images/cart-button.png" alt="">
             </button>
           </div>
-          <svg class="share">
-            <use href="images/sprite.svg#cart-share"></use>
-          </svg>
+          <div class="share">
+            <script>
+              function icons() {
+                let modal = document.getElementById('icons__modal');
+                modal.style.display = 'flex';
+
+                window.onclick = function (event) {
+
+                  if (event.target == modal) {
+                    modal.style.display = 'none'
+                  }
+                };
+              }
+            </script>
+            <svg onclick="icons()">
+              <use href="images/sprite.svg#cart-share"></use>
+            </svg>
+            <div id="icons__modal" class="modal icons__modal">
+              <div class="icons__modal__content">
+                <a href=""><img src="images/icon-link.svg" alt=""></a>
+                <a href=""><img src="images/icon-facebook-two.svg" alt=""></a>
+                <a href=""><img src="images/icon-instagram-two.svg" alt=""></a>
+                <a href=""><img src="images/icon-twitter-two.svg" alt=""></a>
+              </div>
+
+            </div>
+          </div>
         </div>
         <div class="product-view__view__image">
           <img src="images/cart-image.png" alt="">
@@ -216,6 +227,27 @@
             <div class="product-view__details__bottom__row__left">
               <div class="heading">
                 <p class="paragraph">Quantity</p>
+                <form class="quantity-button">
+                  <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                  <input class="input" type="number" id="number" value="0" />
+                  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                </form>
+                <script>
+                  function increaseValue() {
+                    var value = parseInt(document.getElementById('number').value, 10);
+                    value = isNaN(value) ? 0 : value;
+                    value++;
+                    document.getElementById('number').value = value;
+                  }
+
+                  function decreaseValue() {
+                    var value = parseInt(document.getElementById('number').value, 10);
+                    value = isNaN(value) ? 0 : value;
+                    value < 1 ? value = 1 : '';
+                    value--;
+                    document.getElementById('number').value = value;
+                  }
+                </script>
               </div>
             </div>
           </div>

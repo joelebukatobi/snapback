@@ -56,8 +56,8 @@
   }
 }
 
-// doesnt work funnly on firefox or edge, need to fix
-
+// Price Range Slider
+// ---------------------------
 .range-slider {
   width: 100%;
   height: 100%;
@@ -151,13 +151,9 @@ input[type='range']:-moz-focusring {
 input[type='range']::-ms-track {
   width: 100%;
   height: 0.1rem;
-  // height: 100%;
-  /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
   background: transparent;
-  /*leave room for the larger thumb to overflow with a transparent border */
   border-color: transparent;
   border-width: 6px 0;
-  /*remove default tick marks*/
   color: transparent;
   z-index: -4;
 }
@@ -186,6 +182,43 @@ input[type='range']:focus::-ms-fill-lower {
 
 input[type='range']:focus::-ms-fill-upper {
   background: #b3b3b3;
+}
+// Price Slider End.
+
+// Quantity Button
+// ------------------------
+.quantity-button {
+  margin-top: 0.8rem;
+  display: flex;
+  border: 0.1rem solid #e7e7e7;
+  padding: 0rem 1.6rem;
+  justify-content: space-between;
+  align-items: center;
+  width: 16rem;
+
+  & .input {
+    width: 50%;
+    font-size: 2.4rem;
+    text-align: center;
+    border: none;
+    color: #828282;
+    padding: 0;
+  }
+
+  & input[type='number']::-webkit-inner-spin-button,
+  & input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  & .value-button {
+    font-size: 2.4rem;
+    color: #ababab;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      color: #666666;
+    }
+  }
 }
 
 .table {
@@ -216,10 +249,16 @@ input[type='range']:focus::-ms-fill-upper {
     fill: $color-white;
     stroke: $navbar-grey;
   }
+  @media (min-width: 320px) and (max-width: 576px) {
+    height: 4rem;
+    width: 4rem;
+  }
 }
 .rating-text {
   color: $color-black;
-  font-size: 1.6rem;
+  @media (min-width: 320px) and (max-width: 576px) {
+    font-size: 2.46rem;
+  }
 }
 
 .heading-link {
@@ -229,13 +268,9 @@ input[type='range']:focus::-ms-fill-upper {
       font-weight: 600;
     }
   }
-}
-
-.separator {
-  height: 0.2rem;
-  border: none;
-  background-color: $color-secondary;
-  margin: 1.6rem 0;
+  @media (min-width: 320px) and (max-width: 576px) {
+    margin: 2.4rem;
+  }
 }
 
 .container {
@@ -251,13 +286,15 @@ input[type='range']:focus::-ms-fill-upper {
     padding: 0 32rem;
     max-width: 192rem;
     margin: 0 auto;
-    // border: 2px solid red;
   }
 }
 
 .container-navbar {
   background-color: $navbar-grey;
   width: 100%;
+  @media (min-width: 320px) and (max-width: 576px) {
+    background-color: $color-white;
+  }
 }
 
 .container-menu {
@@ -271,11 +308,10 @@ input[type='range']:focus::-ms-fill-upper {
 }
 
 .modal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 5; /* Sit on top */
+  display: none;
+  position: absolute;
+  z-index: 5;
   left: 0;
-  // border: 2px solid red;
   width: 50%;
   border-radius: 0.5rem;
 }
