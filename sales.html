@@ -19,18 +19,25 @@
     <a href="index.html" class="menu__left__logo">
      <img src="images/logo.png" alt="">
     </a>
-    <div class="menu__left__search">
+    <form action="" method="" class="menu__left__search">
      <input class="input" type="search" placeholder="Search by over 5000 caps, beanies and hats...">
      <button class="btn"><img src="images/icon-search.svg" alt=""></button>
-    </div>
+    </form>
    </div>
-   <div>
-    <a class="menu__right" href="cart.html">
+   <div class="menu__right">
+    <a class="menu__right__cart" href="cart.html">
      <svg>
       <use href="images/sprite.svg#icon-cart-two"></use>
      </svg>
      <p class="paragraph">Cart</p>
     </a>
+
+    <!-- Navbar Menu -->
+    <div class="navbar__mobile__menu">
+     <div class="navbar__mobile__menu__bar"></div>
+     <div class="navbar__mobile__menu__bar"></div>
+     <div class="navbar__mobile__menu__bar"></div>
+    </div>
    </div>
   </div>
  </div>
@@ -41,21 +48,12 @@
   <div class="navbar">
    <div class="navbar__mobile">
     <!-- Navbar Logo -->
-    <!-- <div class="navbar__mobile__logo">
+    <div class="navbar__mobile__logo">
      <a class="navbar__mobile__logo__link" href="index.html" title="navbar">
-      <img class="navbar__mobile__logo__link__img" src="images/nav-logo.png" alt="">
+      <img class="navbar__mobile__logo__link__img" src="images/logo.png" alt="">
      </a>
-    </div> -->
-
-    <!-- Navbar Menu -->
-    <div class="navbar__mobile__menu">
-     <div class="navbar__mobile__menu__bar"></div>
-     <div class="navbar__mobile__menu__bar"></div>
-     <div class="navbar__mobile__menu__bar"></div>
     </div>
    </div>
-
-
 
    <!-- Navbar -->
    <nav class="navbar__nav">
@@ -139,7 +137,46 @@
        <img src="images/icon-chevron-down.svg" alt="">
       </div>
      </div>
-     <div class="shirt__heading__section__slider"></div>
+     <div class="shirt__heading__section__slider">
+      <div class="range-slider">
+       <p class="paragraph" id="slide-start"></p>
+       <div class="slider">
+        <input value="1000" min="1000" max="50000" step="500" type="range">
+        <input value="50000" min="1000" max="50000" step="500" type="range">
+       </div>
+       <p class="paragraph" id="slide-end"></p>
+      </div>
+      <script>
+       function getVals() {
+        // Get slider values
+        let parent = this.parentNode;
+        let slides = parent.getElementsByTagName("input");
+        let slide1 = parseFloat(slides[0].value);
+        let slide2 = parseFloat(slides[1].value);
+        // Neither slider will clip the other, so make sure we determine which is larger
+        if (slide1 > slide2) { let tmp = slide2; slide2 = slide1; slide1 = tmp; }
+
+        // let displayElement = parent.getElementsByClassName("rangeValues")[0];
+        document.getElementById("slide-start").innerHTML = "₦" + slide1;
+        document.getElementById("slide-end").innerHTML = "₦" + slide2;
+       }
+
+       window.onload = function () {
+        // Initialize Sliders
+        let sliderSections = document.getElementsByClassName("range-slider");
+        for (let x = 0; x < sliderSections.length; x++) {
+         let sliders = sliderSections[x].getElementsByTagName("input");
+         for (let y = 0; y < sliders.length; y++) {
+          if (sliders[y].type === "range") {
+           sliders[y].oninput = getVals;
+           // Manually trigger event first time to display values
+           sliders[y].oninput();
+          }
+         }
+        }
+       }
+      </script>
+     </div>
      <div class="shirt__heading__section__dropdown">
       <div class="shirt__heading__section__dropdown__group">
        <label for="select"> </label>
@@ -409,24 +446,30 @@
       <h3 class="heading-3">Click on Shirts</h3>
       <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
      </div>
+     <img class="works__process__row__line-one" src="images/icon-line-one.svg" alt="">
      <div class="works__process__row__card">
-      <h5 class="heading-5">Step 1</h5>
+      <h5 class="heading-5">Step 2</h5>
       <h3 class="heading-3">Click on Shirts</h3>
       <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
      </div>
     </div>
     <div class="works__process__row">
-     <div class="works__process__row__card">
-      <h5 class="heading-5">Step 3</h5>
-      <h3 class="heading-3">Click on Shirts</h3>
-      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-     </div>
+     <img class="works__process__row__line-two" src="images/icon-line-two.svg" alt="">
+    </div>
+    <div class="works__process__row">
      <div class="works__process__row__card">
       <h5 class="heading-5">Step 4</h5>
       <h3 class="heading-3">Click on Shirts</h3>
       <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
      </div>
+     <img class="works__process__row__line-three" src="images/icon-line-three.svg" alt="">
+     <div class="works__process__row__card">
+      <h5 class="heading-5">Step 3</h5>
+      <h3 class="heading-3">Click on Shirts</h3>
+      <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+     </div>
     </div>
+    <button class="btn">Get Started</button>
    </div>
   </div>
  </div>
